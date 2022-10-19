@@ -1,21 +1,17 @@
 package com.android.attendance.activity;
 
-import java.util.ArrayList;
-
-import com.android.attendance.bean.AttendanceBean;
-import com.android.attendance.bean.AttendanceSessionBean;
-import com.android.attendance.bean.FacultyBean;
-import com.android.attendance.bean.StudentBean;
-import com.android.attendance.db.DBAdapter;
-import com.example.androidattendancesystem.R;
-
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import com.android.attendance.bean.AttendanceSessionBean;
+import com.android.attendance.db.DBAdapter;
+import com.example.androidattendancesystem.R;
+
+import java.util.ArrayList;
 
 public class TestActivity extends Activity {
 

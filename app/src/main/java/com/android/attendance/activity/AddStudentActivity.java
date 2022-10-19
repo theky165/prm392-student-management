@@ -1,9 +1,5 @@
 package com.android.attendance.activity;
 
-import com.android.attendance.bean.StudentBean;
-import com.android.attendance.db.DBAdapter;
-import com.example.androidattendancesystem.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -20,6 +16,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.android.attendance.bean.StudentBean;
+import com.android.attendance.db.DBAdapter;
+import com.example.androidattendancesystem.R;
 
 public class AddStudentActivity extends Activity {
 

@@ -1,7 +1,5 @@
 package com.android.attendance.activity;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.graphics.Color;
@@ -25,6 +23,8 @@ import com.android.attendance.bean.StudentBean;
 import com.android.attendance.context.ApplicationContext;
 import com.android.attendance.db.DBAdapter;
 import com.example.androidattendancesystem.R;
+
+import java.util.ArrayList;
 
 public class AddAttendanceActivity extends Activity {
 
