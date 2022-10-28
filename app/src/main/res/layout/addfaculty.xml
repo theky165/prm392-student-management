@@ -18,7 +18,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:text="registration"
+            android:text="Registration"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -27,10 +27,11 @@
             android:id="@+id/textViewFirstName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_below="@+id/textViewFormName"
-            android:layout_marginTop="10dp"
-            android:text="firstname"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="9dp"
+            android:text="Firstname"
             android:textColor="#FFFFFF" />
 
         <requestFocus />
@@ -52,18 +53,19 @@
             android:id="@+id/textViewLastName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/editTextFirstName"
             android:layout_below="@+id/editTextFirstName"
-            android:layout_marginTop="15dp"
-            android:text="lastname"
+            android:layout_alignLeft="@+id/editTextFirstName"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="17dp"
+            android:text="Lastname"
             android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/editTextLastName"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:layout_alignLeft="@+id/textViewLastName"
             android:layout_below="@+id/textViewLastName"
+            android:layout_alignLeft="@+id/textViewLastName"
             android:layout_marginTop="5dp"
             android:background="@drawable/roundedtextview"
             android:ems="10"
@@ -112,8 +114,8 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="18dp"
             android:background="@drawable/roundedbutton"
-             android:textColor="#ffffff"
-            android:text="cancle" />
+            android:text="Cancel"
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/RegisterButton"
@@ -125,7 +127,7 @@
             android:layout_marginTop="51dp"
             android:textColor="#ffffff"
             android:background="@drawable/roundedbutton"
-            android:text="submit" />
+            android:text="Submit" />
 
         <TextView
             android:id="@+id/MessageforRegister"
@@ -166,43 +168,47 @@
             android:id="@+id/textViewPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_below="@+id/editTextUserName"
+            android:layout_alignParentLeft="true"
             android:layout_marginTop="14dp"
-            android:text="password"
+            android:text="Password"
             android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/editTextaddr"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:layout_alignParentRight="true"
             android:layout_below="@+id/textViewUserName"
+            android:layout_alignParentRight="true"
             android:background="@drawable/roundedtextview"
+            android:ems="10"
             android:hint="address"
-            android:ems="10" />
+            android:paddingLeft="15dp" />
 
         <TextView
             android:id="@+id/textViewPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textViewEmail"
-            android:layout_alignBottom="@+id/textViewEmail"
             android:layout_alignRight="@+id/textViewPassword"
-            android:text="Mobileno"
+            android:layout_alignBottom="@+id/textViewEmail"
+            android:layout_marginRight="19dp"
+            android:layout_marginBottom="-2dp"
+            android:text="Mobile"
             android:textColor="#FFFFFF" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_below="@+id/editTextaddr"
-            android:layout_marginTop="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="13dp"
             android:text="Username"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#ffffff" />
-        
+
     </RelativeLayout>
 
 </ScrollView>
