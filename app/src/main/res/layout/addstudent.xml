@@ -18,7 +18,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:text="registration"
+            android:text="Registration"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -27,10 +27,10 @@
             android:id="@+id/textViewFirstName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_below="@+id/textViewFormName"
+            android:layout_alignParentLeft="true"
             android:layout_marginTop="10dp"
-            android:text="firstname"
+            android:text="Firstname"
             android:textColor="#FFFFFF" />
 
         <requestFocus />
@@ -52,10 +52,10 @@
             android:id="@+id/textViewLastName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/editTextFirstName"
             android:layout_below="@+id/editTextFirstName"
+            android:layout_alignLeft="@+id/editTextFirstName"
             android:layout_marginTop="15dp"
-            android:text="lastname"
+            android:text="Lastname"
             android:textColor="#FFFFFF" />
 
         <EditText
@@ -111,7 +111,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="18dp"
             android:background="@drawable/roundedbutton"
-            android:text="cancle"
+            android:text="Cancel"
             android:textColor="#ffffff" />
 
         <TextView
@@ -138,11 +138,12 @@
             android:id="@+id/editTextaddr"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:layout_alignParentRight="true"
             android:layout_below="@+id/textViewUserName"
+            android:layout_alignParentRight="true"
             android:background="@drawable/roundedtextview"
             android:ems="10"
-            android:hint="address" />
+            android:hint="address"
+            android:paddingLeft="15dp" />
 
         <TextView
             android:id="@+id/textView1"
@@ -185,7 +186,7 @@
             android:layout_below="@+id/spinneryear"
             android:layout_marginTop="15dp"
             android:background="@drawable/roundedbutton"
-            android:text="submit"
+            android:text="Submit"
             android:textColor="#ffffff" />
     </RelativeLayout>
 
