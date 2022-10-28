@@ -12,34 +12,30 @@ import com.example.androidattendancesystem.R;
 
 public class MainActivity extends Activity {
 
-	Button start;
+    Button start;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-		start =(Button)findViewById(R.id.buttonstart);
-		start.setOnClickListener(new OnClickListener() {
+        start = (Button) findViewById(R.id.buttonstart);
+        start.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
 
-				Intent intent =new Intent(MainActivity.this,LoginActivity.class);
-				startActivity(intent);
-			}
-		});
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
-
-
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 }

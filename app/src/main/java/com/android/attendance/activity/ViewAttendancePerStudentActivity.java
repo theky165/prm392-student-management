@@ -16,41 +16,39 @@ import java.util.ArrayList;
 
 public class ViewAttendancePerStudentActivity extends Activity {
 
-	ArrayList<AttendanceBean> attendanceBeanList;
-	private ListView listView ;  
-	private ArrayAdapter<String> listAdapter;
+    ArrayList<AttendanceBean> attendanceBeanList;
+    private ListView listView;
+    private ArrayAdapter<String> listAdapter;
 
-	DBAdapter dbAdapter = new DBAdapter(this);
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.__listview_main);
+    DBAdapter dbAdapter = new DBAdapter(this);
 
-		listView=(ListView)findViewById(R.id.listview);
-		final ArrayList<String> attendanceList = new ArrayList<String>();
-		attendanceList.add("Present Count Per Student");
-		attendanceBeanList=((ApplicationContext)ViewAttendancePerStudentActivity.this.getApplicationContext()).getAttendanceBeanList();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.__listview_main);
 
-		for(AttendanceBean attendanceBean : attendanceBeanList)
-		{
-			String users = "";
-			
-				DBAdapter dbAdapter = new DBAdapter(ViewAttendancePerStudentActivity.this);
-				StudentBean studentBean =dbAdapter.getStudentById(attendanceBean.getAttendance_student_id());
-				users = attendanceBean.getAttendance_student_id()+".     "+studentBean.getStudent_firstname()+","+studentBean.getStudent_lastname()+"                  "+attendanceBean.getAttendance_session_id();
-				attendanceList.add(users);
-		}
+        listView = (ListView) findViewById(R.id.listview);
+        final ArrayList<String> attendanceList = new ArrayList<String>();
+        attendanceList.add("Present Count Per Student");
+        attendanceBeanList = ((ApplicationContext) ViewAttendancePerStudentActivity.this.getApplicationContext()).getAttendanceBeanList();
 
-		listAdapter = new ArrayAdapter<String>(this, R.layout.view_attendance_list_per_student, R.id.labelAttendancePerStudent, attendanceList);
-		listView.setAdapter( listAdapter ); 
+        for (AttendanceBean attendanceBean : attendanceBeanList) {
+            String users = "";
+
+            DBAdapter dbAdapter = new DBAdapter(ViewAttendancePerStudentActivity.this);
+            StudentBean studentBean = dbAdapter.getStudentById(attendanceBean.getAttendance_student_id());
+            users = attendanceBean.getAttendance_student_id() + ".     " + studentBean.getStudent_firstname() + "," + studentBean.getStudent_lastname() + "                  " + attendanceBean.getAttendance_session_id();
+            attendanceList.add(users);
+        }
+
+        listAdapter = new ArrayAdapter<String>(this, R.layout.view_attendance_list_per_student, R.id.labelAttendancePerStudent, attendanceList);
+        listView.setAdapter(listAdapter);
 
 		/*listView.setOnItemLongClickListener(new OnItemLongClickListener() {
 
 			@Override
 			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
 					final int position, long arg3) {
-
-
 
 				AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ViewAttendanceByFacultyActivity.this);
 
@@ -71,8 +69,7 @@ public class ViewAttendancePerStudentActivity extends Activity {
 						{
 							String users = " FirstName: " + facultyBean.getFaculty_firstname()+"\nLastname:"+facultyBean.getFaculty_lastname();
 							facultyList.add(users);
-							Log.d("users: ", users); 
-
+							Log.d("users: ", users);
 						}
 						
 					}
@@ -91,26 +88,17 @@ public class ViewAttendancePerStudentActivity extends Activity {
 				// show alert
 				alertDialog.show();
 
-
-
-
-
 				return false;
 			}
 		});
 */
 
+    }
 
-
-	}
-
-
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 }

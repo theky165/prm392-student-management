@@ -17,43 +17,40 @@ import java.util.ArrayList;
 
 public class ViewAttendanceByFacultyActivity extends Activity {
 
-	ArrayList<AttendanceBean> attendanceBeanList;
-	private ListView listView ;  
-	private ArrayAdapter<String> listAdapter;
+    ArrayList<AttendanceBean> attendanceBeanList;
+    private ListView listView;
+    private ArrayAdapter<String> listAdapter;
 
-	DBAdapter dbAdapter = new DBAdapter(this);
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.__listview_main);
+    DBAdapter dbAdapter = new DBAdapter(this);
 
-		listView=(ListView)findViewById(R.id.listview);
-		final ArrayList<String> attendanceList = new ArrayList<String>();
-		attendanceList.add("Id | StudentName |  Status");
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.__listview_main);
 
-		attendanceBeanList=((ApplicationContext)ViewAttendanceByFacultyActivity.this.getApplicationContext()).getAttendanceBeanList();
+        listView = (ListView) findViewById(R.id.listview);
+        final ArrayList<String> attendanceList = new ArrayList<String>();
+        attendanceList.add("Id | StudentName |  Status");
 
-		for(AttendanceBean attendanceBean : attendanceBeanList)
-		{
-			String users = "";
-			if(attendanceBean.getAttendance_session_id() != 0)
-			{
-				DBAdapter dbAdapter = new DBAdapter(ViewAttendanceByFacultyActivity.this);
-				StudentBean studentBean =dbAdapter.getStudentById(attendanceBean.getAttendance_student_id());
-				users = attendanceBean.getAttendance_student_id()+".     "+studentBean.getStudent_firstname()+","+studentBean.getStudent_lastname()+"                  "+attendanceBean.getAttendance_status();
-			}
-			else
-			{
-				users = attendanceBean.getAttendance_status();
-			}
-			
-			attendanceList.add(users);
-			Log.d("users: ", users); 
+        attendanceBeanList = ((ApplicationContext) ViewAttendanceByFacultyActivity.this.getApplicationContext()).getAttendanceBeanList();
 
-		}
+        for (AttendanceBean attendanceBean : attendanceBeanList) {
+            String users = "";
+            if (attendanceBean.getAttendance_session_id() != 0) {
+                DBAdapter dbAdapter = new DBAdapter(ViewAttendanceByFacultyActivity.this);
+                StudentBean studentBean = dbAdapter.getStudentById(attendanceBean.getAttendance_student_id());
+                users = attendanceBean.getAttendance_student_id() + ".     " + studentBean.getStudent_firstname() + "," + studentBean.getStudent_lastname() + "                  " + attendanceBean.getAttendance_status();
+            } else {
+                users = attendanceBean.getAttendance_status();
+            }
 
-		listAdapter = new ArrayAdapter<String>(this, R.layout.view_attendance_list, R.id.labelAttendance, attendanceList);
-		listView.setAdapter( listAdapter ); 
+            attendanceList.add(users);
+            Log.d("users: ", users);
+
+        }
+
+        listAdapter = new ArrayAdapter<String>(this, R.layout.view_attendance_list, R.id.labelAttendance, attendanceList);
+        listView.setAdapter(listAdapter);
 
 		/*listView.setOnItemLongClickListener(new OnItemLongClickListener() {
 
@@ -102,26 +99,17 @@ public class ViewAttendanceByFacultyActivity extends Activity {
 				// show alert
 				alertDialog.show();
 
-
-
-
-
 				return false;
 			}
 		});
 */
+    }
 
-
-
-	}
-
-
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
 }
