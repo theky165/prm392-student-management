@@ -54,7 +54,6 @@ public class AddStudentActivity extends Activity {
                 // TODO Auto-generated method stub
                 ((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
                 branch = (String) spinnerbranch.getSelectedItem();
-
             }
 
             @Override

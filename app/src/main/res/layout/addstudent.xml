@@ -159,8 +159,8 @@
             android:id="@+id/spinnerdept"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView1" />
+            android:layout_below="@+id/textView1"
+            android:layout_alignParentLeft="true" />
 
         <TextView
             android:id="@+id/textView2"

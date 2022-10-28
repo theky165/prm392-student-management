@@ -25,7 +25,6 @@ public class ViewStudentActivity extends Activity {
 
     Button submit;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,14 +82,12 @@ public class ViewStudentActivity extends Activity {
 
             @Override
             public void onClick(View arg0) {
-
                 Intent intent = new Intent(ViewStudentActivity.this, ViewStudentByBranchYear.class);
                 intent.putExtra("branch", branch);
                 intent.putExtra("year", year);
                 startActivity(intent);
             }
         });
-
     }
 
 

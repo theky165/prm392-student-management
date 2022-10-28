@@ -42,7 +42,6 @@ public class ViewFacultyActivity extends Activity {
 
             facultyList.add(users);
             Log.d("users: ", users);
-
         }
 
         listAdapter = new ArrayAdapter<String>(this, R.layout.view_faculty_list, R.id.labelF, facultyList);
@@ -74,11 +73,8 @@ public class ViewFacultyActivity extends Activity {
                             String users = " FirstName: " + facultyBean.getFaculty_firstname() + "\nLastname:" + facultyBean.getFaculty_lastname();
                             facultyList.add(users);
                             Log.d("users: ", users);
-
                         }
-
                     }
-
                 });
                 alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
